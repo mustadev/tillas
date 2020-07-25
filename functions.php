@@ -2,7 +2,9 @@
 
 function tillas_theme_support(){
 // add title
-    add_theme_support( "title-tag");
+    add_theme_support( 'title-tag');
+    // add logo customization 
+    add_theme_support('custom-logo');
 }
 
 add_action('after_setup_theme', 'tillas_theme_support');
