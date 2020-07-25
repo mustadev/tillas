@@ -5,7 +5,18 @@ function tillas_theme_support(){
     add_theme_support( "title-tag");
 }
 
-add_action("after_setup_theme", tillas_theme_support);
+add_action('after_setup_theme', 'tillas_theme_support');
+
+function tillas_menus(){
+    $locations  = array(
+        "primary" => "Desktop primary left sidebar",
+        "footer" => "Footer Menu"
+    );
+
+    register_nav_menus($locations);
+}
+
+add_action('init', 'tillas_menus');
 
 function tillas_register_styles(){
     $version = wp_get_theme()->get('Version');
