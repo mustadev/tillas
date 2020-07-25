@@ -1,4 +1,12 @@
 <?php
+
+function tillas_theme_support(){
+// add title
+    add_theme_support( "title-tag");
+}
+
+add_action("after_setup_theme", tillas_theme_support);
+
 function tillas_register_styles(){
     $version = wp_get_theme()->get('Version');
     wp_enqueue_style('tillas-style', get_template_directory_uri() . "/style.css", array("tillas-bootsrtap") , $version, "all");
