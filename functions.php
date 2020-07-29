@@ -5,6 +5,9 @@ function tillas_theme_support(){
     add_theme_support( 'title-tag');
     // add logo customization 
     add_theme_support('custom-logo');
+
+    // add thumpnail suport to posts
+    add_theme_support( 'post-thumbnails' );
 }
 
 add_action('after_setup_theme', 'tillas_theme_support');
