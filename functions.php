@@ -50,4 +50,35 @@ function tillas_register_scripts(){
 
 add_action('wp_enqueue_scripts', 'tillas_register_scripts');
 
+
+// add widget areas
+function tillas_widget_areas(){
+    
+    register_sidebar( 
+    
+        array(
+            'id' => 'sidebar-1',
+            'name' => 'SideBar Areas',
+            'description' => 'SideBar Widget Area',
+            'before_title' => '',
+            'after_title' => '',
+            'before_widget' => '',
+            'after_widget' => ''
+        ));
+
+        register_sidebar( 
+    
+            array(
+                'id' => 'footer-1',
+                'name' => 'Footer Areas',
+                'description' => 'Fouter Widget Area',
+                'before_title' => '',
+                'after_title' => '',
+                'before_widget' => '',
+                'after_widget' => ''
+            ));
+}
+
+add_action('widgets_init', 'tillas_widget_areas');
+
 ?>
